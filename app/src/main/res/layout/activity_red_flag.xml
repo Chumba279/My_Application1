@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    tools:context=".RedFlag">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:cardCornerRadius="14dp"
+            app:cardElevation="6dp"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:id="@+id/btnBackDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_previous"
+                    app:tint="#1E88E5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back to Dashboard"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E88E5"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- PAGE TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red Flag Monitoring"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#D32F2F"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- BIG INCIDENT DETAILS CARD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F4B1B1"
+                android:padding="18dp">
+
+                <!-- STATUS -->
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FLAGGED"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:background="#D32F2F"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="6dp"/>
+
+                <!-- STUDENT -->
+                <TextView
+                    android:id="@+id/txtStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Student: John Doe"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#F40505"
+                    android:layout_marginTop="14dp"/>
+
+                <!-- EMAIL -->
+                <TextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email: student@gmail.com"
+                    android:textSize="15sp"
+                    android:textColor="#555555"
+                    android:layout_marginTop="6dp"/>
+
+                <!-- DEVICE ID -->
+                <TextView
+                    android:id="@+id/txtDeviceId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Device ID: ABC123XYZ"
+                    android:textSize="15sp"
+                    android:textColor="#555555"
+                    android:layout_marginTop="6dp"/>
+
+                <!-- COURSE -->
+                <TextView
+                    android:id="@+id/txtCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Course: CSC101"
+                    android:textSize="15sp"
+                    android:textColor="#555555"
+                    android:layout_marginTop="6dp"/>
+
+                <!-- LECTURER -->
+                <TextView
+                    android:id="@+id/txtLecturer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lecturer: Dr. Smith"
+                    android:textSize="15sp"
+                    android:textColor="#555555"
+                    android:layout_marginTop="6dp"/>
+
+                <!-- GPS -->
+                <TextView
+                    android:id="@+id/txtGps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GPS: -1.2921, 36.8219"
+                    android:textSize="15sp"
+                    android:textColor="#555555"
+                    android:layout_marginTop="6dp"/>
+
+                <!-- VENUE -->
+                <TextView
+                    android:id="@+id/txtVenue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Venue: Main Hall"
+                    android:textSize="15sp"
+                    android:textColor="#555555"
+                    android:layout_marginTop="6dp"/>
+
+                <!-- TIME -->
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Time: 19 May 2026 12:45 PM"
+                    android:textSize="15sp"
+                    android:textColor="#555555"
+                    android:layout_marginTop="6dp"/>
+
+                <!-- INCIDENT ID -->
+                <TextView
+                    android:id="@+id/txtIncidentId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Incident ID: INC001"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#1E88E5"
+                    android:layout_marginTop="12dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- INCIDENT LIST TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recent Incidents"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1E88E5"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- INCIDENTS LIST -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerIncidents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+
+    </LinearLayout>
+
+</ScrollView>

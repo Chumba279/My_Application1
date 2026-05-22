@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Card Container -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/logo"/>
+            <TextView
+                android:text="Login to account"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#1E88E5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="example@gmail.com">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtuseremail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtuserpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chremember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Remember me"
+                android:textSize="22sp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnlogin"
+                android:text="Log in"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cornerRadius="12dp"
+                android:textSize="20sp"
+                app:backgroundTint="#1E88E5"
+                android:textColor="#FFFFFF"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnforgot"
+                android:text="Forgot password"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cornerRadius="12dp"
+                android:textSize="20sp"
+                app:backgroundTint="#00000000"
+                android:textColor="#1E88E5"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnbackaccount"
+                android:text="Do not have account create"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cornerRadius="12dp"
+                android:textSize="20sp"
+                app:backgroundTint="#00000000"
+                android:textColor="#1E88E5"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

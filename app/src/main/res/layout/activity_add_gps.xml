@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".AddGPS">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="6dp"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:id="@+id/btnBackDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_previous"
+                    app:tint="#1E88E5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back to Dashboard"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E88E5"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="24dp">
+
+                <!-- TITLE -->
+
+                <TextView
+                    android:text="Add GPS Venue"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#1E88E5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- AUTO DETECTED COORDINATES -->
+                <TextView
+                    android:id="@+id/txtlat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lat: 0.0000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:padding="12dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginBottom="12dp"/>
+                <TextView
+                    android:id="@+id/txtlong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lat: 0.0000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:padding="12dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- VENUE NAME -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Venue Name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtVenueName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- VENUE CODE -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Venue Code"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtVenueCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- RADIUS -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Radius (meters)"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtRadius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- ADD BUTTON -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddGps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add GPS Venue"
+                    android:layout_marginTop="20dp"
+                    app:cornerRadius="12dp"
+                    android:backgroundTint="#1E88E5"
+                    android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- place to display saved gps -->
+
+        <!-- SECTION TITLE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saved GPS Locations"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_margin="12dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#1E88E5"/>
+
+        <!-- LIST -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerGps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:nestedScrollingEnabled="false"/>
+    </LinearLayout>
+
+</ScrollView>
